@@ -114,11 +114,6 @@
             background-color: #88c0a0;
         }
 
-        .btn:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-
         footer {
             margin-top: 30px;
             text-align: center;
@@ -145,14 +140,12 @@
 
     <main>
         {% if error %}
-        <!-- Display error message if something went wrong -->
         <div class="error-message">
             <strong>Error:</strong> {{ error }}
         </div>
         {% endif %}
 
         {% if comic %}
-        <!-- Display the comic if we successfully fetched it -->
         <div class="comic-container">
             <h2 class="comic-title">{{ comic.title }}</h2>
             <p class="comic-number">Comic #{{ comic.num }}</p>
@@ -166,10 +159,27 @@
             <p class="comic-date">
                 Published: {{ comic.month }}/{{ comic.day }}/{{ comic.year }}
             </p>
-            <!-- TODO: Add any buttons for navigation, random, or form to fetch comics -->
+
+            <!-- Navigation Buttons -->
+            <div class="navigation">
+                <a href="/navigate/{{ comic.num }}/prev" class="btn">Previous</a>
+                <a href="/navigate/{{ comic.num }}/next" class="btn">Next</a>
+                <a href="/random" class="btn">Random</a>
+                <a href="/recent" class="btn">Recent</a>
+            </div>
+
+            <br>
+
+            <!-- Search Form -->
+            <form method="POST" action="/search">
+                <input type="text" name="comic_num" placeholder="Enter comic number">
+                <button type="submit" class="btn">Search</button>
+            </form>
+
         </div>
         {% endif %}
     </main>
+
     <footer>
         <p>Comics from <a href="https://xkcd.com" target="_blank">xkcd.com</a> by Randall Munroe</p>
         <p>Created for IT Capstone - Week 4 Assignment</p>
