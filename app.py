@@ -64,6 +64,94 @@ def show_comic(comic_num):
     else:
         return render_template('index.html', comic=None,
                              error=f"Comic #{comic_num} could not be found. It may not exist.")
+import random
+
+#Random Comic
+@app.route('/random')
+def random_comic():
+    latest = get_latest_comic()
+    if not latest:
+        return render_template('index.html', comic=None,
+                               error="Could not fetch latest comic.")
+
+    latest_num = latest.get("num")
+    random_num = random.randint(1, latest_num)
+    comic = get_comic_by_number(random_num)
+
+    if comic:
+        return render_template('index.html', comic=comic, error=None)
+    else:
+        return render_template('index.html', comic=None,
+                               error="Could not fetch a random comic.")
+
+
+#Navigation
+@app.route('/navigate/<int:comic_num>/<string:direction>')
+def navigate_comic(comic_num, direction):
+    latest = get_latest_comic()
+    if not latest:
+        return render_template('index.html', comic=None,
+                               error="Could not fetch latest comic.")
+
+    latest_num = latest.get("num")
+
+    if direction == "prev":
+        new_num = comic_num - 1
+        if new_num < 1:
+            new_num = 1
+    elif direction == "next":
+        new_num = comic_num + 1
+        if new_num > latest_num:
+            new_num = latest_num
+    else:
+        return render_template('index.html', comic=None,
+                               error="Invalid navigation direction.")
+
+    comic = get_comic_by_number(new_num)
+    if comic:
+        return render_template('index.html', comic=comic, error=None)
+    else:
+        return render_template('index.html', comic=None,
+                               error="Comic not found.")
+
+
+#Search Form
+@app.route('/search', methods=['POST'])
+def search_comic():
+    comic_num = request.form.get("comic_num")
+
+    if not comic_num or not comic_num.isdigit():
+        return render_template('index.html', comic=None,
+                               error="Please enter a valid comic number.")
+
+    comic_num = int(comic_num)
+    comic = get_comic_by_number(comic_num)
+
+    if comic:
+        return render_template('index.html', comic=comic, error=None)
+    else:
+        return render_template('index.html', comic=None,
+                               error=f"Comic #{comic_num} not found.")
+
+
+#Display Multiple Recent Comics
+@app.route('/recent')
+def recent_comics():
+    latest = get_latest_comic()
+    if not latest:
+        return render_template('index.html', comic=None,
+                               error="Could not fetch latest comics.")
+
+    latest_num = latest.get("num")
+    comics = []
+
+    #last 5
+    for num in range(latest_num, max(latest_num - 5, 0), -1):
+        comic = get_comic_by_number(num)
+        if comic:
+            comics.append(comic)
+
+    return render_template('recent.html', comics=comics)
 
 
 # TODO: Add more routes here for the other features you choose to implement
