@@ -9,10 +9,10 @@ Check off the features you implemented (must have at least 4 and 2 are implemete
 
 - [X] Feature #1: Display the Latest Comic
 - [X] Feature #2: Display a Specific Comic by Number
-- [ ] Feature #3: Random Comic Button
-- [ ] Feature #4: Navigation (Previous/Next)
-- [ ] Feature #5: Search by Comic Number Form
-- [ ] Feature #6: Display Multiple Recent Comics
+- [X] Feature #3: Random Comic Button
+- [X] Feature #4: Navigation (Previous/Next)
+- [X] Feature #5: Search by Comic Number Form
+- [X] Feature #6: Display Multiple Recent Comics
 
 ## Technologies Used
 
@@ -53,17 +53,12 @@ Check off the features you implemented (must have at least 4 and 2 are implemete
 
 ## Usage
 
-[Explain how to use your application - what can users do? What buttons should they click?]
+User can click the Next and Previous buttons to navigate between comic issues. They can also click the "Random" button to fetch a random comic. There is a box to search for a comic by its designated issue number. There is also a button to display recently uploaded comics they may click.
 
 ## Screenshots
 
-[Add screenshots of your application here - you can drag and drop images into GitHub or use Markdown image syntax]
+<img width="883" height="1173" alt="comic viewer" src="https://github.com/user-attachments/assets/e99702f1-e5a1-4e5a-aaf8-94c3278bd085" />
 
-Example:
-```
-![Latest Comic View](screenshots/latest-comic.png)
-![Search Feature](screenshots/search.png)
-```
 
 ## API Endpoints Used
 
