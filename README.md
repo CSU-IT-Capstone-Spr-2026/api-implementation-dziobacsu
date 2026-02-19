@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/zN2AskmG)
 # XKCD Comic Viewer
 
-[Add your 2-3 sentence description of what your application does here]
+A webapp that displays the latest issued XKCD comic. The user has the ability to: navigate between comics, randomly fetch one, search them by issue, and view recent uploads.
 
 ## Features Implemented
 
@@ -72,10 +72,16 @@ User can click the Next and Previous buttons to navigate between comic issues. T
 - How did you solve them?
 - What did you learn about APIs?
 
+I do not like coding, and I am not familair with HTML or APIs at all. At least with Python, I understand it for the most part. I am not familiar with JSON, APIs, nor HTML. So, I would say the challenge by and large was figuring out how to actually use these tools to do what the assignment asked I do. Another challenge I had was not being super familiar still with github or github desktop. The navigation came back quick though.
+
+To solve my challenges I had to do extensive research and scour forums for coding errors I was facing, whether they were purely syntax or when I would try to run the code. I also read documentation on Flask, HTML, etc and cross referenced what I was reading with posts I would coem across that were trying to solve the same issues I was.
+
+APIs are great for implementing features to an app. IT eliminates the need to code everything from the ground up, and you are able to effectively use APIs so long as you understand their actual implementation and use cases that pertain to what you are trying to do. 
+
 ## Future Improvements
 
-[Optional: What would you add if you had more time?]
+I'd love a dark mode for the webpage. I feel like that could be cool to implement since the comics seem to all be black and white. You could invert them to have a dark mode for the app.
 
 ## Author
 
-[Your name]
+Daniel Dzioba
