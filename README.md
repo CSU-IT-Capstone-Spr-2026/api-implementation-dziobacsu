@@ -67,16 +67,12 @@ User can click the Next and Previous buttons to navigate between comic issues. T
 
 ## Challenges and Solutions
 
-[Write 2-3 paragraphs about:]
-- What challenges did you face while working on this assignment?
-- How did you solve them?
-- What did you learn about APIs?
 
-I do not like coding, and I am not familair with HTML or APIs at all. At least with Python, I understand it for the most part. I am not familiar with JSON, APIs, nor HTML. So, I would say the challenge by and large was figuring out how to actually use these tools to do what the assignment asked I do. Another challenge I had was not being super familiar still with github or github desktop. The navigation came back quick though.
+I do not like coding, and I am not familair with HTML or APIs at all. At least with Python, I understand it for the most part. I am not familiar with JSON, APIs, nor HTML. So, I would say the challenge by and large was figuring out how to actually use these tools to do what the assignment asked I do. Another challenge I had was not being super familiar still with github or github desktop. The navigation came back quick though. 
 
-To solve my challenges I had to do extensive research and scour forums for coding errors I was facing, whether they were purely syntax or when I would try to run the code. I also read documentation on Flask, HTML, etc and cross referenced what I was reading with posts I would coem across that were trying to solve the same issues I was.
+To solve my challenges I had to do extensive research and scour forums for coding errors I was facing, whether they were purely syntax or when I would try to run the code. I also read documentation on Flask, HTML, etc and cross referenced what I was reading with posts I would come across that were trying to solve the same issues I was. 
 
-APIs are great for implementing features to an app. IT eliminates the need to code everything from the ground up, and you are able to effectively use APIs so long as you understand their actual implementation and use cases that pertain to what you are trying to do. 
+APIs are great for implementing features into an app. It eliminates the need to code everything from the ground up, and you are able to effectively use APIs so long as you understand their actual implementation and use cases that pertain to what you are trying to do. This assignment would have taken much longer if I was expected to code everything the various APIs are doing for me from scratch.
 
 ## Future Improvements
 
